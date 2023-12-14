@@ -1,6 +1,6 @@
 ﻿namespace Seminar_1_DZ.Operations
 {
-    internal class Dev
+    internal class Devision
     {
         public static void Devision2Numbers (double num1,  double num2)
         {

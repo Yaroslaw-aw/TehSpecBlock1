@@ -1,6 +1,6 @@
 ﻿namespace Seminar_1_DZ.Operations
 {
-    internal class Sub
+    internal class Substract
     {
         public static void Substract2Numbers(double num1,  double num2)
         {

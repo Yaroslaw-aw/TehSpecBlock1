@@ -1,6 +1,6 @@
 ﻿namespace Seminar_1_DZ.Operations
 {
-    internal class Sum
+    internal class Summation
     {
         public static void Sum2Numbers(double num1, double num2)
         {            

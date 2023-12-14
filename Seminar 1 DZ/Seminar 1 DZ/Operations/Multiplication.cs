@@ -1,6 +1,6 @@
 ﻿namespace Seminar_1_DZ.Operations
 {
-    internal class Mult
+    internal class Multiplication
     {
         public static void Multiplicate2Numbers(double num1, double num2)
         {
