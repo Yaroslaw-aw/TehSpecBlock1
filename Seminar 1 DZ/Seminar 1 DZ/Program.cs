@@ -1,48 +1,48 @@
-﻿namespace Seminar_1_DZ
+﻿using Seminar_1_DZ.Operations;
+
+namespace Seminar_1_DZ
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            if (args.Length < 1)
+            if (args.Length == 3)
             {
-                throw new Exception("Ничего не введено");
-            }
+                double number1 = double.Parse(args[0]);
+                double number2 = double.Parse(args[2]);                
 
-            if (!double.TryParse(args[0], out double number1) || !double.TryParse(args[2], out double number2))
-            {
-                throw new Exception("Неверный ввод");
+                switch (args[1])
+                {
+                    case "+":
+                        {
+                            Sum.Sum2Numbers(number1, number2);
+                            break;
+                        }
+                    case "-":
+                        {
+                            Sub.Substract2Numbers(number1, number2);
+                            break;
+                        }
+                    case "*":
+                        {
+                            Mult.Multiplicate2Numbers(number1, number2);
+                            break;
+                        }
+                    case "/":
+                        {
+                            Dev.Devision2Numbers(number1, number2);
+                            break;
+                        }
+                    default:
+                        {
+                            Console.WriteLine("Введен не верный оператор");
+                            break;
+                        }
+                }
             }
-
-            switch (args[1])
+            else
             {
-                case "+":
-                    {
-                        Console.WriteLine(number1 + number2);
-                        break;
-                    }
-                case "-":
-                    {
-                        Console.WriteLine(number1 - number2);
-                        break;
-                    }
-                case "*":
-                    {
-                        Console.WriteLine(number1 * number2);
-                        break;
-                    }
-                case "/":
-                    {
-                        if (number2 != 0)
-                        {
-                            Console.WriteLine(number1 / number2);
-                        }
-                        else
-                        {
-                            Console.WriteLine("Попытка деления на ноль. А так нельзя");
-                        }
-                        break;
-                    }
+                Console.WriteLine("Для использования программы введите: число знак(+-/*) число");
             }
         }
     }
