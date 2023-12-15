@@ -2,16 +2,16 @@
 {
     internal class Devision
     {
-        public static void Devision2Numbers (double num1,  double num2)
+        public static double? Devision2Numbers (double num1,  double num2)
         {
             if (num2 == 0)
             {
                 Console.WriteLine("Попытка деления на ноль");
-                return;
+                return null;
             }
             else
             {
-                Console.WriteLine($"{num1} / {num2} = {num1 / num2}");
+                return num1 / num2;
             }
         }
     }

@@ -9,7 +9,9 @@ namespace Seminar_1_DZ
             if (args.Length == 3)
             {
                 double number1 = double.Parse(args[0]);
-                double number2 = double.Parse(args[2]);                
+                double number2 = double.Parse(args[2]);
+
+                double? result = default;
 
                 switch (args[1])
                 {
@@ -39,6 +41,9 @@ namespace Seminar_1_DZ
                             break;
                         }
                 }
+
+                if (result != null) 
+                    Console.WriteLine($"{number1} {args[1]} {number2} = {result}");
             }
             else
             {

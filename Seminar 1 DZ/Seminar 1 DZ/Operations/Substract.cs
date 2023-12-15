@@ -2,9 +2,9 @@
 {
     internal class Substract
     {
-        public static void Substract2Numbers(double num1,  double num2)
+        public static double Substract2Numbers(double num1,  double num2)
         {
-            Console.WriteLine($"{num1} - {num2} = {num1 - num2}");
+            return num1 - num2;
         }
     }
 }
