@@ -17,22 +17,22 @@ namespace Seminar_1_DZ
                 {
                     case "+":
                         {
-                            Summation.Sum2Numbers(number1, number2);
+                            result = Summation.Sum2Numbers(number1, number2);
                             break;
                         }
                     case "-":
                         {
-                            Substract.Substract2Numbers(number1, number2);
+                            result = Substract.Substract2Numbers(number1, number2);
                             break;
                         }
                     case "*":
                         {
-                            Multiplication.Multiplicate2Numbers(number1, number2);
+                            result = Multiplication.Multiplicate2Numbers(number1, number2);
                             break;
                         }
                     case "/":
                         {
-                            Devision.Devision2Numbers(number1, number2);
+                            result = Devision.Devision2Numbers(number1, number2);
                             break;
                         }
                     default:
