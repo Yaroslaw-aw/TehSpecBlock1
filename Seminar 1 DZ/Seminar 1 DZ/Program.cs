@@ -1,6 +1,4 @@
-﻿using Seminar_1_DZ.Operations;
-
-namespace Seminar_1_DZ
+﻿namespace Seminar_1_DZ
 {
     internal class Program
     {
@@ -17,22 +15,22 @@ namespace Seminar_1_DZ
                 {
                     case "+":
                         {
-                            result = Summation.Sum2Numbers(number1, number2);
+                            result = number1 + number2;
                             break;
                         }
                     case "-":
                         {
-                            result = Substract.Substract2Numbers(number1, number2);
+                            result = number1 - number2;
                             break;
                         }
                     case "*":
                         {
-                            result = Multiplication.Multiplicate2Numbers(number1, number2);
+                            result = number1 * number2;
                             break;
                         }
                     case "/":
                         {
-                            result = Devision.Devision2Numbers(number1, number2);
+                            result = Devision(number1, number2);
                             break;
                         }
                     default:
@@ -48,6 +46,19 @@ namespace Seminar_1_DZ
             else
             {
                 Console.WriteLine("Для использования программы введите: число знак(+-/*) число");
+            }
+
+            double? Devision(double num1, double num2)
+            {
+                if (num2 == 0)
+                {
+                    Console.WriteLine("Попытка деления на ноль");
+                    return null;
+                }
+                else
+                {
+                    return num1 / num2;
+                }
             }
         }
     }
