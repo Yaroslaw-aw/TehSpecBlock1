@@ -4,14 +4,18 @@
     {
         static void Main(string[] args)
         {
+            double? result = default;
+
             if (args.Length == 3)
             {
                 double number1 = double.Parse(args[0]);
                 double number2 = double.Parse(args[2]);
 
-                double? result = default;
+                string operation = args[1];
 
-                switch (args[1])
+                
+
+                switch (operation)
                 {
                     case "+":
                         {
@@ -35,13 +39,13 @@
                         }
                     default:
                         {
-                            Console.WriteLine("Введен не верный оператор");
+                            Console.WriteLine("Введен неверный оператор");
                             break;
                         }
                 }
 
                 if (result != null) 
-                    Console.WriteLine($"{number1} {args[1]} {number2} = {result}");
+                    Console.WriteLine($"{number1} {operation} {number2} = {result}");
             }
             else
             {
