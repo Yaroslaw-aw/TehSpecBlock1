@@ -4,8 +4,6 @@
     {
         static void Main(string[] args)
         {
-            double? result = default;
-
             if (args.Length == 3)
             {
                 double number1 = double.Parse(args[0]);
@@ -13,7 +11,7 @@
 
                 string operation = args[1];
 
-                
+                double? result = default;
 
                 switch (operation)
                 {
