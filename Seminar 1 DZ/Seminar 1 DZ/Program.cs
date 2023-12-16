@@ -9,9 +9,9 @@
                 double number1 = double.Parse(args[0]);
                 double number2 = double.Parse(args[2]);
 
-                string operation = args[1];
-
                 double? result = default;
+
+                string operation = args[1];                
 
                 switch (operation)
                 {
